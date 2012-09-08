@@ -1,0 +1,26 @@
+<html>
+  <head>
+    <script type="text/javascript" src="./smoothie.js"></script>
+    <script type="text/javascript" src="./main.js"></script>
+    <script type="text/javascript">
+
+      // Randomly add a data point every 500ms
+      var random = new TimeSeries();
+      setInterval(function() {
+        random.append(new Date().getTime(), Math.random() * 10000);
+      }, 500);
+      
+      function createTimeline() {
+        var chart = new SmoothieChart();
+        chart.addTimeSeries(random, { strokeStyle: 'rgba(0, 0, 255, 1)', fillStyle: 'rgba(0, 0, 255, 0.2)', lineWidth: 4 });
+        chart.streamTo(document.getElementById("chart"), 500);
+      }
+
+    </script>
+  </head>
+  <body onload="createTimeline()" style="background-color:#f0f0f0">
+
+    <canvas id="chart" width="600" height="200"></canvas>
+    <div id="result"></div>
+  </body>
+</html>

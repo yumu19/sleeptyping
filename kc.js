@@ -1,0 +1,65 @@
+var headangle = new Array();
+//2列目
+headangle["9"] = -1; //Tab
+headangle["81"] = -0.93; //q
+headangle["87"] = -0.83; //w
+headangle["69"] = -0.73; //e
+headangle["82"] = -0.63; //r
+headangle["84"] = -0.53; //t
+headangle["89"] = -0.43; //y
+headangle["85"] = -0.33; //u
+headangle["73"] = -0.23; //i
+headangle["79"] = -0.13; //o
+headangle["80"] = 0.03 ; //p
+//headangle["0"] = 0.1; //@
+headangle["219"] = 0.17; //[
+//headangle["13"] = 0.3; //Enter
+//headangle[""] = 0.4; //Insert
+headangle["36"] = 0.5; //Home
+headangle["33"] = 0.6; //PgUp
+headangle["103"] = 0.7; //7
+headangle["104"] = 0.8; //8
+headangle["105"] = 0.9; //9
+//headangle["107"] = 1; //+
+
+//3列目
+headangle["20"] = -1; //caps
+headangle["65"] = -0.9; //a
+headangle["83"] = -0.8; //s
+headangle["68"] = -0.7; //d
+headangle["70"] = -0.6; //f
+headangle["71"] = -0.5; //g
+headangle["72"] = -0.4; //h
+headangle["74"] = -0.3; //j
+headangle["75"] = -0.2; //k
+headangle["76"] = -0.1; //l
+headangle["59"] = 0 ; //;
+headangle["0"] = 0.1; //:
+headangle["221"] = 0.2; //]
+//headangle["13"] = 0.3; //Enter
+headangle["46"] = 0.4; //del
+headangle["35"] = 0.5; //End
+headangle["34"] = 0.6; //PgDn
+headangle["100"] = 0.7; //4
+headangle["101"] = 0.8; //5
+headangle["102"] = 0.9; //6
+headangle["107"] = 1; //+
+
+//4列目
+headangle["16"] = -1; //左Shift
+headangle["90"] = -0.85; //z
+headangle["88"] = -0.75; //x
+headangle["67"] = -0.65; //c
+headangle["86"] = -0.55; //v
+headangle["66"] = -0.45; //b
+headangle["78"] = -0.35; //n
+headangle["77"] = -0.25; //m
+headangle["188"] = -0.15; //,
+headangle["190"] = -0.05; //.
+//headangle["191"] = 0 ; ///
+//headangle["0"] = 0.1; //_
+headangle["38"] = 0.5; //↑
+headangle["97"] = 0.7; //1
+headangle["98"] = 0.8; //2
+headangle["99"] = 0.9; //3
+//headangle["13"] = 1; //Enter
