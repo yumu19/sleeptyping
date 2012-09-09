@@ -3,28 +3,44 @@
 		<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
 		<script type="text/javascript" src="./smoothie.js"></script>
 		<script type="text/javascript" src="./kc.js"></script>
-		<script type="text/javascript" src="./main.js"></script>
-       <link type="text/css" rel="stylesheet" href="./main.css" />
-       <title>Sleep Typing | ABPro 2012</title>
+		<script type="text/javascript" src="./main.js" charset="UTF-8"></script>
+		<link type="text/css" rel="stylesheet" href="./main.css" />
+		<meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+		<meta http-equiv="Content-Script-Type" content="text/javascript" />
+		<title>Sleep Typing | ABPro 2012</title>
 	</head>
-	<body onload="createTimeline()">
-		<h1>SleepTyping</h1>
-		<h2>Tsubasa Yumura / @yumu19</h2>
-<!--		<img src="./GnG_face_2012.jpg" height="100" /> -->
-		<canvas id="chart" width="400" height="300"></canvas>
-		<div id="turn">寝返り回数：　0</div>
-		<div id="position"></div>
-		<div id="turnTime"></div>
-		<div id="result">
-			<table id="resultTable">
-				<tr>
-					<td>時間帯</td>
-					<td>移動量</td>
-					<td>寝返り数</td>
-				</tr>
-			</table>
+	<body onload="init()">
+		<!--		<img src="./GnG_face_2012.jpg" height="100" /> -->
+		<canvas id="futonCanvas" width="400" height="600">
+			hoge
+		</canvas>
+		<div id="info">
+			<div id="turnBox">
+				<p>
+					寝返り回数： <span id="turn">0</span>
+				</p>
+			</div>
+			<div id="result">
+				<table id="resultTable">
+					<tr>
+						<td>時間帯</td>
+						<td>移動量
+						<br />
+						(マクラー)</td>
+						<td>寝返り数</td>
+					</tr>
+				</table>
+			</div>
+			<div id="turnTime"></div>
 		</div>
+		<canvas id="chart" width="400" height="200"></canvas>
 		<input type="button" value="reload" onclick="location.reload();" />
-		<form><input type="button" id="tweetbutton" name="tweetbutton" value="ツイートする" onclick="tweet()" /></form>
-		</body>
-		</html>
+		<form>
+			<input type="button" id="tweetbutton" name="tweetbutton" value="ツイートする" onclick="tweet()" />
+		</form>
+		<div id="debug">
+			debug
+		</div>
+		<div id="position"></div>
+	</body>
+</html>
