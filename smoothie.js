@@ -73,7 +73,7 @@ TimeSeries.prototype.append = function(timestamp, value) {
 function SmoothieChart(options) {
   // Defaults
   options = options || {};
-  options.grid = options.grid || { fillStyle:'#ffffff', strokeStyle: '#777777', lineWidth: 1, millisPerLine: 1000, verticalSections: 10 };
+  options.grid = options.grid || { fillStyle:'#ffffff', strokeStyle: '#777777', lineWidth: 1, millisPerLine: 200, verticalSections: 10 };
   options.millisPerPixel = options.millisPerPixel || 20;
   options.fps = options.fps || 50;
   options.maxValueScale = options.maxValueScale || 1;
@@ -84,8 +84,8 @@ function SmoothieChart(options) {
   options.scaleSmoothing = options.scaleSmoothing || 0.125;
   this.options = options;
   this.seriesSet = [];
-  this.currentValueRange = 1;
-  this.currentVisMinValue = 0;
+  this.currentValueRange = 2;
+  this.currentVisMinValue = -1;
 }
 
 SmoothieChart.prototype.addTimeSeries = function(timeSeries, options) {

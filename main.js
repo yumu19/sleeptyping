@@ -54,9 +54,10 @@ function k(evt) {
 			turn = 0;
 			tEnd = new Date(tEnd.getTime() + interval);
 		}
-		move = move + Math.abs(headangle[kc] - oldAngle);
+        var dMove = headangle[kc] - oldAngle;
+		move = move + Math.abs(dMove);
 		oldAngle = headangle[kc];
-		angle.append(new Date().getTime(), headangle[kc]);
+		angle.append(t.getTime(), dMove);
 	    context.fillStyle = "rgb(240, 240, 240)";
 		context.fillRect(0, 0, 400, 600)
 		context.drawImage(pirrow, 80, 0);
@@ -67,7 +68,7 @@ function k(evt) {
 				var tForm = ("0" + t.getHours()).slice(-2) + ":" + ("0" + t.getMinutes()).slice(-2) + ":" + ("0" + t.getSeconds()).slice(-2);
 				document.getElementById("turnTime").innerHTML += tForm + "<br />";
 			}
-			context.drawImage(man, 50, 0);
+			context.drawImage(man, 40, 0);
 			oldPosition = "right";
 		} else if(headangle[kc] < 0.4) {
 			context.drawImage(man, 80, 0);
@@ -79,13 +80,14 @@ function k(evt) {
 				var tForm = ("0" + t.getHours()).slice(-2) + ":" + ("0" + t.getMinutes()).slice(-2) + ":" + ("0" + t.getSeconds()).slice(-2);
 				document.getElementById("turnTime").innerHTML += tForm + "<br />";
 			}
-			context.drawImage(man, 130, 0);
+			context.drawImage(man, 120, 0);
 			oldPosition = "left";
 		}
 		document.getElementById("position").innerHTML = position + "<br />";
 		context.drawImage(futon, 0, 180);
+
 	}
-	document.getElementById("turn").innerHTML = turn;
+	//document.getElementById("turn").innerHTML = turn;
 }
 
 function init() {
@@ -106,7 +108,7 @@ function init() {
 		fillStyle : 'rgba(0, 0, 255, 0.2)',
 		lineWidth : 4
 	});
-	chart.streamTo(document.getElementById("chart"), 500);
+	chart.streamTo(document.getElementById("chart"), 250);
 
 }
 
