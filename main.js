@@ -14,6 +14,7 @@ var angle = new TimeSeries();
 var position = "center";
 var oldPosition = "right";
 var turn;
+var sumTurn = 0;
 var move = 0;
 var interval = 5 * 60 * 1000;
 var tStart = new Date();
@@ -65,8 +66,10 @@ function k(evt) {
 			position = "right";
 			if(oldPosition == "left") {
 				turn++;
+				sumTurn++;
 				var tForm = ("0" + t.getHours()).slice(-2) + ":" + ("0" + t.getMinutes()).slice(-2) + ":" + ("0" + t.getSeconds()).slice(-2);
 				document.getElementById("turnTime").innerHTML += tForm + "<br />";
+				document.getElementById("turn").innerHTML = sumTurn;
 			}
 			context.drawImage(man, 40, 0);
 			oldPosition = "right";
@@ -77,8 +80,10 @@ function k(evt) {
 			position = "left";
 			if(oldPosition == "right") {
 				turn++;
+				sumTurn++;
 				var tForm = ("0" + t.getHours()).slice(-2) + ":" + ("0" + t.getMinutes()).slice(-2) + ":" + ("0" + t.getSeconds()).slice(-2);
 				document.getElementById("turnTime").innerHTML += tForm + "<br />";
+				document.getElementById("turn").innerHTML = sumTurn;
 			}
 			context.drawImage(man, 120, 0);
 			oldPosition = "left";

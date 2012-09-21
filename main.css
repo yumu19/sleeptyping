@@ -21,6 +21,11 @@ div#turn {
 	color: #0000FF
 }
 
+#turn {
+	color: #FF0000;
+	font-size:xx-large
+}
+
 table#resultTable {
 	width: 400px;
     border: 3px #E3E3E3 solid;
