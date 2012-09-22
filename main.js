@@ -118,5 +118,5 @@ function init() {
 }
 
 function tweet() {
-	window.open('https://twitter.com/intent/tweet?text=+おはよう！昨晩は' + turn + '回寝返ったわー+ %23sleeptyping');
+	window.open('https://twitter.com/intent/tweet?text=+おはよう！昨晩は' + turn + '回寝返ったわー+ %23sleeptyping %23ABPro');
 }
